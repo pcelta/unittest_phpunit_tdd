@@ -8,8 +8,11 @@ class ServiceTest extends PHPUnit_Framework_TestCase
     public function testSaveShouldReturnTrueWhenSaveWithSuccess()
     {
         $mockedRepository = $this->getMock('Repository', array('save'));
-        $mockedRepository->expects($this->once())
+        $obj = new stdClass();
+	$obj->nome = 'pedro';
+	$mockedRepository->expects($this->once())
             ->method('save')
+	    ->with($obj)
             ->will($this->returnValue(true));
 
         $service = new Service($mockedRepository);

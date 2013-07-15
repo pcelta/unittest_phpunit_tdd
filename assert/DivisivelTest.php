@@ -2,14 +2,22 @@
 require_once 'Divisivel.php';
 class DivisivelTest extends PHPUnit_FrameWork_TestCase
 {
-    
-    public function testEDivisivelDeveRetornarTrueQuandoDivisivel()
+    /**
+     * @dataProvider eDivisivelProvider
+     */
+    public function testEDivisivelDeveRetornarTrueQuandoDivisivel($dividendo, $divisor)
     {
-        $dividendo = 4;
-        $divisor = 2;
         $divisivelInstance = new Divisivel();
         $result = $divisivelInstance->eDivisivel($dividendo, $divisor);
         $this->assertTrue($result);
+    }
+    public static function eDivisivelProvider()
+    {
+	return array(
+	    array(4, 2),
+            array(2, 2),
+	    array(5, 5)
+	);
     }
 
     public function testEDivisivelDeveRetornarFalseQuandoNaoDivisivel()
