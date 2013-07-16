@@ -2,7 +2,7 @@ unit:
 	@cd tests ; phpunit --verbose -d memory_limit=512M . ; cd ../
 
 coverage:
-	@cd tests ; phpunit --colors --verbose --coverage-html=./data/coverage --log-junit=./data/junit.xml --coverage-clover=./data/clover.xml . ; cd ../
+	@cd tests ; phpunit --colors --verbose --coverage-html=`pwd`/../data/coverage --log-junit=`pwd`/../data/junit.xml --coverage-clover=`pwd`/../data/clover.xml . ; cd ../
 
 phpmd:
 	phpmd --reportfile `pwd`/data/pmd.xml ./ xml codesize,controversial,design,naming,unusedcode
