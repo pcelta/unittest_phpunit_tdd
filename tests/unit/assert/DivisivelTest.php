@@ -1,5 +1,5 @@
 <?php
-require_once 'Divisivel.php';
+require_once __dir__ . '/../../../assert/Divisivel.php';
 class DivisivelTest extends PHPUnit_FrameWork_TestCase
 {
     /**
