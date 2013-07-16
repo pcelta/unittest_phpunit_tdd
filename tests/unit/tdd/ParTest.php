@@ -1,5 +1,5 @@
 <?php
-require_once 'Par.php';
+require_once __dir__ . '/../../../tdd/Par.php';
 class ParTest extends PHPUnit_Framework_TestCase{
 
 	public function testEPar(){

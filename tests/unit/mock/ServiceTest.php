@@ -1,6 +1,6 @@
 <?php
-require_once 'Service.php';
-require_once 'Repository.php';
+require_once __dir__ . '/../../../mock/Service.php';
+require_once __dir__ . '/../../../mock/Repository.php';
 
 class ServiceTest extends PHPUnit_Framework_TestCase
 {
